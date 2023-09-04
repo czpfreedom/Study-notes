@@ -1,0 +1,20 @@
+% Qcircuit demonstration graphic
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass{amsart}
+
+\usepackage[matrix,frame,arrow]{xypic}
+\usepackage[braket]{qcircuit}
+
+\vfuzz2pt % Don't report over-full v-boxes if over-edge is small
+
+%%% ----------------------------------------------------------------------
+\begin{document}
+\[
+\Qcircuit @C=1.0em @R=.7em {
+\lstick{\ket{0}} & \gate{H^{\otimes{n}}} & \multigate{1}{G} & 	\multigate{1}{G} & \cdots  &   & \multigate{1}{G} & \meter\\
+& \qw & \ghost{G} & \ghost{G} & \cdots  &  & \ghost{G} & \qw \\
+}
+\]
+\end{document}
+% ------------------------------------------------------------------------
