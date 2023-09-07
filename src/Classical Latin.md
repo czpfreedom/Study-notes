@@ -1,6 +1,6 @@
 # Classical Latin
 
-### 1. vocabulary
+### 0.1.  vocabulary
 
 |meaning | infinitive  | 1st singular | 2nd singular | 3rd singular | imperative singular |
 |:-------- | ------------------ | :----------- | :----------- | ------------ | :------------------ |
