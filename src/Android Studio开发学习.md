@@ -107,9 +107,99 @@ public fun ComponentActivity.setContent(
 
 ## 3. Jetpack Compose
 
+## 工程结构
 
+### app
 
+### Manifests
 
+### java
+
+### res
+
+#### drawable
+
+如果您想创建一个 **Drawable**对象，该对象最初并不依赖于由您的代码定义的变量或用户互动，则最好在 XML 中定义 **Drawable**。即使您预期 **Drawable**在用户与您的应用互动时属性会更改，您也应考虑在 XML 中定义该对象，因为您可以在对其进行实例化之后修改其属性。
+
+#### layout
+
+### Gradle Scripts
+
+## 常用类
+
+### BaseAdapter
+
+如下图所示，我们需要理解这四个重写方法。
+
+```java
+public class MyBaseAdapter extends BaseAdapter {
+    @Override
+    public int getCount() {
+        return 0;
+    }
+    @Override
+    public Object getItem(int position) {
+        return null;
+    }
+    @Override
+    public long getItemId(int position) {
+        return 0;
+    }
+    @Override
+    public View getView(int position, View convertView, ViewGroup parent) {
+        return null;
+    }
+}
+```
+
+#### getCount
+
+返回要显示的条目的数量。
+
+#### getItem
+
+待学习。
+
+#### getItemId
+
+待学习。
+
+#### getView
+
+返回该条目要显示的界面。
+
+##### convertView
+
+### Context
+
+Context类是一个抽象类，我们Acitvity、Service等类都是Context的子类。
+
+### LayoutInflater
+
+LayoutInflater是用来找layout下xml布局文件，并且实例化。
+对于一个没有被载入或者想要动态加载的界面，都需要使用LayoutInflater.inflate()来载入。
+
+#### 获取LayoutInflater实例
+
+```java
+LayoutInflater inflater1 = LayoutInflater.from(this);  
+LayoutInflater inflater2 = getLayoutInflater();  
+LayoutInflater inflater3 = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
+```
+
+#### inflate方法
+
+inflate方法有三个参数(int resource, ViewGroup root, boolean attachToRoot)。
+
+参数的含义如下：
+
+1. resource：需要加载布局文件的id，意思是需要将这个布局文件中加载到Activity中来操作。
+
+2. root：需要附加到resource资源文件的根控件，什么意思呢，就是inflate()会返回一个View对象，如果第三个参数attachToRoot为true，就将这个root作为根对象返回，否则仅仅将这个root对象的LayoutParams属性附加到resource对象的根布局对象上，也就是布局文件resource的最外层的View上，比如是一个LinearLayout或者其它的Layout对象。
+
+3. attachToRoot：是否将root附加到布局文件的根视图上。
+
+inflate将返回一个view对象。
 
 ## 随记
 
