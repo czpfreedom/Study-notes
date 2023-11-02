@@ -82,7 +82,7 @@ public partial class Logo : Sprite2D
 
 没搞懂，以后用的时候再说吧。
 
-
+## Transform2D
 
 ## Node
 
@@ -99,6 +99,18 @@ public partial class Logo : Sprite2D
 ##### Path2D
 
 - Curve2D **curve**  - 一个用来描述路径的Curve2D变量
+
+#### Control
+
+##### Label
+
+在一行中显示纯文本，或在一个矩形内包裹。对于格式化的文本，使用RichTextLabel。
+
+##### RichTextLabel
+
+显示富文本的标签。
+
+富文本可以包含自定义文本、字体、图像和一些基本格式。该标签会将这些以内部标签堆栈的形式进行管理。它还可以适应给定的宽度/高度。
 
 ## Reference
 
@@ -151,3 +163,9 @@ GDExtension 不是一种脚本语言，而是一种用于与本机代码交互�
 ### GDScript
 
 略。
+
+
+
+label
+
+transform2D

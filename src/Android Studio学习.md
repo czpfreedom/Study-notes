@@ -1,6 +1,18 @@
 # Android Studio学习
 
-## 1. 常用数据库
+## 1. 什么是Android应用
+
+### Android应用运行在哪
+
+​	安卓应用是运行在虚拟机中的。安卓应用是使用Java语言编写的，然后使用Android SDK编译成Dalvik字节码，最后在Dalvik虚拟机中运行。Dalvik虚拟机是Android操作系统的一部分，它是一个基于寄存器的虚拟机，专门为移动设备设计。
+
+#### Dalvik虚拟机
+
+Dalvik虚拟机是Google等厂商合作开发的Android移动设备平台的核心组成部分之一。它可以支持已转换为.dex（即「Dalvik Executable」）格式的Java应用程序的运行。.dex格式是专为Dalvik设计的一种压缩格式，适合内存和处理器速度有限的系统。
+
+Dalvik虚拟机主要负责完成对象生命周期管理、堆栈管理、线程管理、安全和异常管理，以及垃圾回收等。
+
+## 常用数据库
 
 ### 1.1.  LitePal
 
@@ -407,3 +419,26 @@ KeyEvent keyEventUp = new KeyEvent(KeyEvent.ACTION_UP, KeyEvent.KEYCODE_HOME);
 getWindow().getDecorView().dispatchKeyEvent(keyEventDown);
 getWindow().getDecorView().dispatchKeyEvent(keyEventUp);
 ```
+
+## Kotlin学习
+
+### 继承
+
+#### Kotlin
+
+Kotlin中，继承是通过冒号（:）符号实现的。
+
+实例：
+
+```kotlin
+class ChildClass : ParentClass() {
+    // ChildClass code
+}
+```
+
+这实际上继承了父类的构造函数。
+
+#### Java
+
+Java中，继承是通过extends关键字实现的。	
+
